@@ -37,7 +37,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build JAR file with Gradle
-        run: ./gradlew build
+        run: ./gradlew clean build
 
       - name: Copy JAR to project root as app.jar
         run: cp build/libs/*.jar app.jar
