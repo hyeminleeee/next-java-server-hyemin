@@ -40,7 +40,9 @@ jobs:
         run: ./gradlew clean build
 
       - name: Copy JAR to project root as app.jar
-        run: cp build/libs/*.jar app.jar
+        run: |
+          JAR_FILE=$(ls build/libs | grep -v plain | grep '.jar$' | head -n 1)
+          cp build/libs/$JAR_FILE app.jar
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
