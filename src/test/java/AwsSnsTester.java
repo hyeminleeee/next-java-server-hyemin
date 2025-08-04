@@ -31,5 +31,6 @@ public class AwsSnsTester {
         // 발송
         PublishResponse response = snsClient.publish(request);
         System.out.println("✅ 푸시 발송 성공: " + response.messageId());
+
     }
 }
