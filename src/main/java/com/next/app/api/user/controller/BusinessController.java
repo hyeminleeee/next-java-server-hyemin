@@ -39,4 +39,5 @@ public class BusinessController {
     public void deleteBusiness(@PathVariable Long id) {
         businessService.deleteBusiness(id);
     }
+
 }
